@@ -6,7 +6,7 @@
 
 
 
-#cabecario {
+#cabecalho {
     background-color: #AFBD5E;
     position: fixed;
     left: 0;
@@ -115,7 +115,7 @@ body {
 .layout {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 200px;
+    padding-top: 150px;
 }
 
 /* Título da seção */
@@ -307,4 +307,19 @@ body {
     .imagem-produto {
         height: 200px;
     }
+}
+
+.cupom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.cupom h3{
+    border: dashed black 2px;
+    padding: 8px;
+    margin: 10px;
 }
