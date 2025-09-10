@@ -4,8 +4,15 @@
     margin: 0px;
 }
 
+
+
 header {
     background-color: #AFBD5E;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -16,10 +23,17 @@ header {
     gap: 30px;
 }
 
-
 .menu a {
     text-decoration: none;
     color: #000;
+    border: solid #5D6532 3px;
+    padding: 8px;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #5D6532;
 }
 
 nav {
@@ -29,12 +43,24 @@ nav {
     align-items: center;
 }
 
-.logo img {
-    display: block;
-    width: 100px;
-    height: 100px;
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
+.logo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+
+#vest-escrita{
+    margin-left: -35px;
+    width: 120px;
+    height: 90px;
+}
 
 .buscar {
     display: flex;
