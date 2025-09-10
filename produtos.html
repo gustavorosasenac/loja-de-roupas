@@ -98,12 +98,11 @@
             const cardsPorSlide = 3;
             const totalSlides = Math.ceil(cards.length / cardsPorSlide);
             
-            // Ajustar para mobile
             function checkScreenSize() {
                 if (window.innerWidth <= 768) {
-                    return 1; // 1 card por slide em mobile
+                    return 1;
                 }
-                return 3; // 3 cards por slide em desktop
+                return 3;
             }
             
             function updateCarrossel() {
@@ -111,7 +110,6 @@
                 const translateValue = -currentIndex * (100 / cardsVisiveis) + '%';
                 agrupamento.style.transform = 'translateX(' + translateValue + ')';
                 
-                // Atualizar indicadores
                 indicadores.forEach((indicador, index) => {
                     if (index === currentIndex) {
                         indicador.classList.add('ativo');
@@ -133,7 +131,6 @@
                 updateCarrossel();
             });
             
-            // Clique nos indicadores
             indicadores.forEach(indicador => {
                 indicador.addEventListener('click', function() {
                     currentIndex = parseInt(this.getAttribute('data-index'));
@@ -141,10 +138,8 @@
                 });
             });
             
-            // Inicializar carrossel
             updateCarrossel();
             
-            // Redimensionamento da janela
             window.addEventListener('resize', function() {
                 const novosCardsVisiveis = checkScreenSize();
                 totalSlides = Math.ceil(cards.length / novosCardsVisiveis);
