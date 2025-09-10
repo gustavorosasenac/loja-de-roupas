@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Produtos</title>
+    <link rel="stylesheet" href="./assets/css/style-produtos.css">
+    <title>Produtos - Militar Store</title>
 </head>
 
 <body>
@@ -14,59 +14,144 @@
             <!--Conteudo principal-->
             <section class="produtos-promocao">
                 <h2>Modelos em promoção</h2>
-                <div class="agrupamento-produtos">
-                    <div class="card-produtos"></div>
-                    <h3>Camisa Feminina</h3>
-                    <p class="preco-produto">R$ 69,99</p>
-                    <p>ou 10x de R$8,29</p>
-                    <button>Comprar</button>
-                </div>
+                <div class="carrossel-container">
+                    <div class="agrupamento-produtos">
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/013220/FFFFFF/png?text=Camisa+Feminina');"></div>
+                            <h3>Camisa Feminina</h3>
+                            <p class="preco-produto">R$ 69,99</p>
+                            <p>ou 10x de R$8,29</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Camisa Masculina</h3>
-                <p class="preco-produto">R$ 79,99</p>
-                <p>ou 10x de R$9,69</p>
-                <button>Comprar</button>
-                </div>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/014421/FFFFFF/png?text=Camisa+Masculina');"></div>
+                            <h3>Camisa Masculina</h3>
+                            <p class="preco-produto">R$ 79,99</p>
+                            <p>ou 10x de R$9,69</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Calça Feminina</h3>
-                <p class="preco-produto">R$ 85,99</p>
-                <p>ou 10x de R$8,99</p>
-                <button>Comprar</button>
-                </div>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/015242/FFFFFF/png?text=Calça+Feminina');"></div>
+                            <h3>Calça Feminina</h3>
+                            <p class="preco-produto">R$ 85,99</p>
+                            <p>ou 10x de R$8,99</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Calça Masculina</h3>
-                <p class="preco-produto">R$ 89,99</p>
-                <p>ou 10x de R$9,99</p>
-                <button>Comprar</button>
-                </div>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/013A20/FFFFFF/png?text=Calça+Masculina');"></div>
+                            <h3>Calça Masculina</h3>
+                            <p class="preco-produto">R$ 89,99</p>
+                            <p>ou 10x de R$9,99</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Casaco Camuflado</h3>
-                <p class="preco-produto">R$ 129,99</p>
-                <p>ou 10x de R$13,59</p>
-                <button>Comprar</button>
-                </div>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/0A3410/FFFFFF/png?text=Casaco+Camuflado');"></div>
+                            <h3>Casaco Camuflado</h3>
+                            <p class="preco-produto">R$ 129,99</p>
+                            <p>ou 10x de R$13,59</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Cuturno Preto</h3>
-                <p class="preco-produto">R$ 49,99</p>
-                <p>ou 10x de R$5,29</p>
-                <button>Comprar</button>
-                </div>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/1B4D28/FFFFFF/png?text=Cuturno+Preto');"></div>
+                            <h3>Cuturno Preto</h3>
+                            <p class="preco-produto">R$ 49,99</p>
+                            <p>ou 10x de R$5,29</p>
+                            <button>Comprar</button>
+                        </div>
 
-                <div class="card-produtos"></div>
-                <h3>Cueca camuflada</h3>
-                <p class="preco-produto">R$ 19,99</p>
-                <p>ou 10x de R$2,89</p>
-                <button>Comprar</button>
+                        <div class="card-produto">
+                            <div class="imagem-produto" style="background-image: url('https://placehold.co/300x400/2D5A27/FFFFFF/png?text=Cueca+Camuflada');"></div>
+                            <h3>Cueca camuflada</h3>
+                            <p class="preco-produto">R$ 19,99</p>
+                            <p>ou 10x de R$2,89</p>
+                            <button>Comprar</button>
+                        </div>
+                    </div>
+                    
+                    <button class="carrossel-btn prev">&#10094;</button>
+                    <button class="carrossel-btn next">&#10095;</button>
+                    
+                    <div class="carrossel-indicadores">
+                        <span class="indicador ativo" data-index="0"></span>
+                        <span class="indicador" data-index="1"></span>
+                        <span class="indicador" data-index="2"></span>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const agrupamento = document.querySelector('.agrupamento-produtos');
+            const cards = document.querySelectorAll('.card-produto');
+            const btnPrev = document.querySelector('.carrossel-btn.prev');
+            const btnNext = document.querySelector('.carrossel-btn.next');
+            const indicadores = document.querySelectorAll('.indicador');
+            
+            let currentIndex = 0;
+            const cardsPorSlide = 3;
+            const totalSlides = Math.ceil(cards.length / cardsPorSlide);
+            
+            // Ajustar para mobile
+            function checkScreenSize() {
+                if (window.innerWidth <= 768) {
+                    return 1; // 1 card por slide em mobile
+                }
+                return 3; // 3 cards por slide em desktop
+            }
+            
+            function updateCarrossel() {
+                const cardsVisiveis = checkScreenSize();
+                const translateValue = -currentIndex * (100 / cardsVisiveis) + '%';
+                agrupamento.style.transform = 'translateX(' + translateValue + ')';
+                
+                // Atualizar indicadores
+                indicadores.forEach((indicador, index) => {
+                    if (index === currentIndex) {
+                        indicador.classList.add('ativo');
+                    } else {
+                        indicador.classList.remove('ativo');
+                    }
+                });
+            }
+            
+            btnNext.addEventListener('click', function() {
+                const cardsVisiveis = checkScreenSize();
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarrossel();
+            });
+            
+            btnPrev.addEventListener('click', function() {
+                const cardsVisiveis = checkScreenSize();
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarrossel();
+            });
+            
+            // Clique nos indicadores
+            indicadores.forEach(indicador => {
+                indicador.addEventListener('click', function() {
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    updateCarrossel();
+                });
+            });
+            
+            // Inicializar carrossel
+            updateCarrossel();
+            
+            // Redimensionamento da janela
+            window.addEventListener('resize', function() {
+                const novosCardsVisiveis = checkScreenSize();
+                totalSlides = Math.ceil(cards.length / novosCardsVisiveis);
+                updateCarrossel();
+            });
+        });
+    </script>
 </body>
 
 </html>
