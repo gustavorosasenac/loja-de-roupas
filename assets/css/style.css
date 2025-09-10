@@ -44,7 +44,7 @@
     align-items: center;
 }
 
-.logo{
+.logo {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -57,7 +57,7 @@
     height: 90px;
 }
 
-#vest-escrita{
+#vest-escrita {
     margin-left: -35px;
     width: 120px;
     height: 90px;
@@ -94,7 +94,7 @@
     font-size: 16px;
 }
 
-    .buscar input::placeholder {
+.buscar input::placeholder {
     color: black;
     font-size: 16px;
     font-style: italic;
@@ -102,6 +102,209 @@
     padding-left: 5px;
 }
 
-.buscar button:hover{
+.buscar button:hover {
     background-color: #effd9b;
+}
+
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+/* Título da seção */
+.produtos-promocao h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2D5A27;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.produtos-promocao h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #2D5A27;
+}
+
+/* Container do carrossel */
+.carrossel-container {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Agrupamento de produtos (slides) */
+.agrupamento-produtos {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+/* Cards de produtos */
+.card-produto {
+    flex: 0 0 calc(95% / 3);
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imagem-produto {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-produto h3 {
+    font-size: 1.2rem;
+    margin: 15px 15px 10px;
+    color: #2D5A27;
+    text-align: center;
+}
+
+.card-produto p {
+    margin: 5px 15px;
+    text-align: center;
+}
+
+.preco-produto {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #2D5A27;
+}
+
+.card-produto button {
+    background: #2D5A27;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px auto;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    display: block;
+    width: 80%;
+}
+
+.card-produto button:hover {
+    background: #1B4D28;
+}
+
+/* Botões de navegação do carrossel */
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(45, 90, 39, 0.7);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background: rgba(45, 90, 39, 1);
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+/* Indicadores do carrossel */
+.carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicador.ativo {
+    background: #2D5A27;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .card-produto {
+        flex: 0 0 calc(100% / 4);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-produto {
+        flex: 0 0 100%;
+    }
+
+    .carrossel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .produtos-promocao h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .layout {
+        padding: 10px;
+    }
+
+    .produtos-promocao h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-produto {
+        margin: 0 5px;
+    }
+
+    .imagem-produto {
+        height: 200px;
+    }
 }
