@@ -6,33 +6,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Produtos - Militar Store</title>
+    <style>
+        /* Estilos específicos para a página de produtos */
+        
+    </style>
 </head>
 
 <body>
-    <div class="navegacao">
-        <header id="cabecario">
-            <nav id="nave">
-                <div class="logo">
-                    <img src="/assets/css/images/vest-imagem.png" alt="" id="vest-imagem">
-                    <img src="/assets/css/images/vest-escrita.png" alt="" id="vest-escrita">
+    <!--Cabeçalho - Header-->
+    <header id="cabecalho">
+        <nav id="nave">
+            <div class="logo">
+                <img src="/assets/css/images/vest-imagem.png" alt="" id="vest-imagem">
+                <img src="/assets/css/images/vest-escrita.png" alt="" id="vest-escrita">
+            </div>
+            <div class="busca">
+                <form class="buscar">
+                    <input type="text" name="q" placeholder="Digite sua busca aqui...">
+                    <button type="submit"><img src="/assets/css/images/search.png" alt=""></button>
+                </form>
+            </div>
+            <div class="menu">
+                <ol>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html#sobre">Sobre</a></li>
+                    <li><a href="./produtos.html">Produtos</a></li>
+                    <li><a href="./index.html#contatos">Contatos</a></li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <h1 class="produtos-titulo">Nossos Produtos</h1>
+        
+        <!-- Filtros -->
+        <div class="filtros-container">
+            <div class="filtro-grupo">
+                <div class="filtro-titulo">Gênero</div>
+                <div class="filtro-opcoes">
+                    <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" data-filtro="masculino">Masculino</button>
+                    <button class="filtro-btn" data-filtro="feminino">Feminino</button>
                 </div>
-                <div class="busca">
-                    <form class="buscar">
-                        <input type="text" name="q" placeholder="Digite sua busca aqui...">
-                        <button type="submit"><img src="/assets/css/images/search.png" alt=""></button>
-                    </form>
+            </div>
+            
+            <div class="filtro-grupo">
+                <div class="filtro-titulo">Categoria</div>
+                <div class="filtro-opcoes">
+                    <button class="filtro-btn ativo" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" data-filtro="camisa">Camisas</button>
+                    <button class="filtro-btn" data-filtro="calca">Calças</button>
+                    <button class="filtro-btn" data-filtro="outros">Outros</button>
                 </div>
-                <div class="menu">
-                    <ol>
-                        <li><a href="./index.html">Inicio</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="./produtos.html">Produtos</a></li>
-                        <li><a href="#contatos">Contatos</a></li>
-                    </ol>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </div>
+        
+        <div class="contador-produtos">Mostrando <span id="contador">20</span> produtos</div>
+        
+        <!-- Grid de produtos -->
+        <div class="produtos-grid">
+            <!-- Produto 1 -->
+            <div class="card-produto" data-genero="feminino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('assets/css/images/camisa-militar-feminina.jpg');"></div>
+                <h3>Camisa Feminina Verde</h3>
+                <p class="preco-produto">R$ 69,99</p>
+                <p>ou 10x de R$8,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 2 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('assets/css/images/camisa-militar-masculina.jpg');"></div>
+                <h3>Camisa Masculina Camuflada</h3>
+                <p class="preco-produto">R$ 79,99</p>
+                <p>ou 10x de R$9,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 3 -->
+            <div class="card-produto" data-genero="feminino" data-categoria="calca">
+                <div class="imagem-produto" style="background-image: url('assets/css/images/calça-militar-feminina.jpg');"></div>
+                <h3>Calça Feminina Tática</h3>
+                <p class="preco-produto">R$ 85,99</p>
+                <p>ou 10x de R$10,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 4 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="calca">
+                <div class="imagem-produto" style="background-image: url('assets/css/images/calça-militar-masculina.jpg');"></div>
+                <h3>Calça Masculina Camuflada</h3>
+                <p class="preco-produto">R$ 89,99</p>
+                <p>ou 10x de R$10,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 5 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('assets/css/images/japona-militar.jpg');"></div>
+                <h3>Japona Militar</h3>
+                <p class="preco-produto">R$ 129,99</p>
+                <p>ou 10x de R$14,59</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 6 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('/assets/css/images/coturno.jpg');"></div>
+                <h3>Coturno Preto</h3>
+                <p class="preco-produto">R$ 149,99</p>
+                <p>ou 10x de R$16,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 7 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('/assets/css/images/cueca.jpg');"></div>
+                <h3>Cueca Camuflada</h3>
+                <p class="preco-produto">R$ 29,99</p>
+                <p>ou 3x de R$5,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 8 -->
+            <div class="card-produto" data-genero="feminino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/camisa-manga-longa.webp');"></div>
+                <h3>Camisa Feminina Manga Longa</h3>
+                <p class="preco-produto">R$ 89,99</p>
+                <p>ou 10x de R$11,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 9 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/camisa-masculina-manga-longa.webp');"></div>
+                <h3>Camisa Masculina Manga Longa</h3>
+                <p class="preco-produto">R$ 84,99</p>
+                <p>ou 10x de R$9,49</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 10 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/bone.webp');"></div>
+                <h3>Boné Militar</h3>
+                <p class="preco-produto">R$ 39,99</p>
+                <p>ou 4x de R$10,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 11 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/moletom.jpg');"></div>
+                <h3>Moletom Militar</h3>
+                <p class="preco-produto">R$ 119,99</p>
+                <p>ou 10x de R$12,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 12-->
+            <div class="card-produto" data-genero="feminino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/regata-feminina.webp');"></div>
+                <h3>Regata Feminina Militar</h3>
+                <p class="preco-produto">R$ 49,99</p>
+                <p>ou 5x de R$10,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 13 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="camisa">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/regata-masculina.jpg');"></div>
+                <h3>Regata Masculina Militar</h3>
+                <p class="preco-produto">R$ 54,99</p>
+                <p>ou 5x de R$11,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 14 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/mochila.webp');"></div>
+                <h3>Mochila Tática</h3>
+                <p class="preco-produto">R$ 159,99</p>
+                <p>ou 10x de R$16,99</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 15 -->
+            <div class="card-produto" data-genero="feminino" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/gorro-feminino.webp');"></div>
+                <h3>Gorro Militar Feminino</h3>
+                <p class="preco-produto">R$ 34,99</p>
+                <p>ou 3x de R$12,33</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 16 -->
+            <div class="card-produto" data-genero="masculino" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/gorro-masculino.webp');"></div>
+                <h3>Gorro Militar Masculino</h3>
+                <p class="preco-produto">R$ 34,99</p>
+                <p>ou 3x de R$12,33</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 17 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/cinto.jpg');"></div>
+                <h3>Cinto Militar</h3>
+                <p class="preco-produto">R$ 44,99</p>
+                <p>ou 4x de R$12,24</p>
+                <button>Comprar</button>
+            </div>
+            
+            <!-- Produto 28 -->
+            <div class="card-produto" data-genero="unissex" data-categoria="outros">
+                <div class="imagem-produto" style="background-image: url('./assets/css/images/meia.webp');"></div>
+                <h3>Meia Militar (3 pares)</h3>
+                <p class="preco-produto">R$ 39,99</p>
+                <p>ou 4x de R$10,99</p>
+                <button>Comprar</button>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        © 2025 Vest - Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // Sistema de filtros - CORRIGIDO
+        document.addEventListener('DOMContentLoaded', function() {
+            const filtroBtns = document.querySelectorAll('.filtro-btn');
+            const produtos = document.querySelectorAll('.card-produto');
+            const contadorElemento = document.getElementById('contador');
+            
+            // Objeto para armazenar os filtros ativos
+            const filtrosAtivos = {
+                genero: 'todos',
+                categoria: 'todos'
+            };
+            
+            // Inicialmente mostrar todos os produtos
+            aplicarFiltros();
+            
+            // Adicionar event listeners para todos os botões de filtro
+            filtroBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Determinar a qual grupo pertence o botão
+                    const grupo = this.closest('.filtro-grupo').querySelector('.filtro-titulo').textContent;
+                    
+                    // Remover classe ativo de todos os botões do mesmo grupo
+                    const grupoBtns = this.parentElement.querySelectorAll('.filtro-btn');
+                    grupoBtns.forEach(b => b.classList.remove('ativo'));
+                    
+                    // Adicionar classe ativo ao botão clicado
+                    this.classList.add('ativo');
+                    
+                    // Atualizar filtros ativos
+                    if (grupo === 'Gênero') {
+                        filtrosAtivos.genero = this.getAttribute('data-filtro');
+                    } else if (grupo === 'Categoria') {
+                        filtrosAtivos.categoria = this.getAttribute('data-filtro');
+                    }
+                    
+                    // Aplicar filtros
+                    aplicarFiltros();
+                });
+            });
+            
+            function aplicarFiltros() {
+                let produtosVisiveis = 0;
+                
+                produtos.forEach(produto => {
+                    const produtoGenero = produto.getAttribute('data-genero');
+                    const produtoCategoria = produto.getAttribute('data-categoria');
+                    
+                    const mostraPorGenero = (filtrosAtivos.genero === 'todos') || (filtrosAtivos.genero === produtoGenero);
+                    const mostraPorCategoria = (filtrosAtivos.categoria === 'todos') || (filtrosAtivos.categoria === produtoCategoria);
+                    
+                    if (mostraPorGenero && mostraPorCategoria) {
+                        produto.style.display = 'block';
+                        produtosVisiveis++;
+                    } else {
+                        produto.style.display = 'none';
+                    }
+                });
+                
+                // Atualizar contador
+                contadorElemento.textContent = produtosVisiveis;
+            }
+        });
+    </script>
 </body>
 
 </html>
