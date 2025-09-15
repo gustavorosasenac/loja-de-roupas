@@ -1,0 +1,302 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+#cabecalho {
+    background-color: #AFBD5E;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Garante que o cabeçalho fique sobre todos os outros elementos */
+}
+
+.menu ol {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    border: solid #5D6532 3px;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    color: white;
+    background-color: #5D6532;
+}
+
+#nave {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+
+#vest-escrita {
+    margin-left: -35px;
+    width: 120px;
+    height: 90px;
+}
+
+.fale-conosco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5D6532;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #5D6532;
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+}
+
+/* Container Principal */
+.container-contato {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px 50px; /* Espaçamento para header fixo */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Títulos de Seção */
+.entre-contato h1, #redes-sociais h2, #mapa h3, .form-contato h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2D5A27;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.entre-contato h1::after, #redes-sociais h2::after, #mapa h3::after, .form-contato h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #2D5A27;
+}
+
+/* Bloco de informações de contato */
+.info-bloco {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.endereco, .horarios {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: 45%;
+}
+
+.endereco h3, .horarios h3 {
+    color: #5D6532;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Redes Sociais */
+#redes-sociais .icones {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+#redes-sociais img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#redes-sociais img:hover {
+    transform: scale(1.1);
+}
+
+/* Mapa */
+#mapa {
+    text-align: center;
+}
+
+#mapa iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Formulário de Contato */
+.form-contato {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.form-contato input:focus, .form-contato textarea:focus {
+    outline: none;
+    border-color: #5D6532;
+    box-shadow: 0 0 5px rgba(93, 101, 50, 0.5);
+}
+
+.form-contato button {
+    background: #2D5A27;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    font-size: 1.1rem;
+    align-self: center;
+    width: 200px;
+}
+
+.form-contato button:hover {
+    background: #1B4D28;
+}
+
+/* Seção de Ajuda */
+.ajuda {
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ajuda a {
+    color: #2D5A27;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ajuda a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AFBD5E;
+    height: 60px;
+    font-size: larger;
+    color: black;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+@media (max-width: 768px) {
+    #cabecalho {
+        position: static; /* Deixa de ser fixo */
+        box-shadow: none;
+    }
+
+    #nave {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .menu ol {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+
+    .container-contato {
+        padding-top: 20px; /* Reduz padding pois o header não é mais fixo */
+    }
+
+    .entre-contato h1, #redes-sociais h2, #mapa h3, .form-contato h3 {
+        font-size: 1.7rem;
+    }
+
+    .info-bloco {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .endereco, .horarios {
+        flex-basis: 100%; /* Ocupa toda a largura */
+    }
+
+    #redes-sociais img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-contato {
+        padding-top: 20px;
+    }
+}
